@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="FlashcardsStage4Test" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-02-28T18:35:54" hostname="Principals-MBP" time="0.189">
+  <properties/>
+  <testcase name="start" classname="FlashcardsStage4Test" time="0.189"/>
+  <system-out><![CDATA[?[1;31m
+Start test 1?[0m
+Input the number of cards:
+>2
+The card #1:
+>black
+The definition of the card #1:
+>white
+The card #2:
+>black
+The card "black" already exists. Try again:
+>red
+The definition of the card #2:
+>white
+The definition "white" already exists. Try again:
+>green
+Print the definition of "black":
+>white
+Correct answer.
+Print the definition of "red":
+>green
+Correct answer.
+?[1;31m
+Start test 2?[0m
+Input the number of cards:
+>2
+The card #1:
+>a brother of one's parent
+The definition of the card #1:
+>uncle
+The card #2:
+>a part of the body where the foot and the leg meet
+The definition of the card #2:
+>ankle
+Print the definition of "a brother of one's parent":
+>ankle
+Wrong answer. The correct one is "uncle", you've just written the definition of "a part of the body where the foot and the leg meet".
+Print the definition of "a part of the body where the foot and the leg meet":
+>???
+Wrong answer. The correct one is "ankle".
+?[1;31m
+Start test 3?[0m
+Input the number of cards:
+>4
+The card #1:
+>c1
+The definition of the card #1:
+>d1
+The card #2:
+>c2
+The definition of the card #2:
+>d2
+The card #3:
+>c3
+The definition of the card #3:
+>d3
+The card #4:
+>c3
+The card "c3" already exists. Try again:
+>c2
+The card "c2" already exists. Try again:
+>c1
+The card "c1" already exists. Try again:
+>c4
+The definition of the card #4:
+>d2
+The definition "d2" already exists. Try again:
+>d3
+The definition "d3" already exists. Try again:
+>d1
+The definition "d1" already exists. Try again:
+>d4
+Print the definition of "c1":
+>d1
+Correct answer.
+Print the definition of "c2":
+>d1
+Wrong answer. The correct one is "d2", you've just written the definition of "c1".
+Print the definition of "c3":
+>d3 ddd3
+Wrong answer. The correct one is "d3".
+Print the definition of "c4":
+>???
+Wrong answer. The correct one is "d4".
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

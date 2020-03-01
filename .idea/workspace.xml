@@ -2,10 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc01f4ac-364a-49bd-bfab-7496382d03eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capitals.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.3.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.3.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.3.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.3.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.3.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.3.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.3.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.3.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageData" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageData" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageRecordIndex" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageRecordIndex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flashcards/A good stack/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Flashcards/A good stack/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flashcards/Make it your own/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Flashcards/Make it your own/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flashcards/Menu, please!/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Flashcards/Menu, please!/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flashcards/Stage one, card one/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Flashcards/Stage one, card one/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flashcards/What’s on the card?/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Flashcards/What’s on the card?/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flashcards/task/out/production/classes/flashcards/MainKt$loadCards$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Flashcards/task/out/production/classes/flashcards/MainKt$loadCards$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flashcards/task/out/production/classes/flashcards/MainKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/Flashcards/task/out/production/classes/flashcards/MainKt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Flashcards/task/src/flashcards/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Flashcards/task/src/flashcards/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flashcards/task/test/DialogClue.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Flashcards/task/test/DialogClue.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flashcards/task/test/FlashcardsStage5Test.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Flashcards/task/test/FlashcardsStage6Test.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capitals.txt" beforeDir="false" afterPath="$PROJECT_DIR$/capitals.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +89,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582914316571</updated>
-      <workItem from="1582914319100" duration="11840000" />
+      <workItem from="1582914319100" duration="12164000" />
+      <workItem from="1583045252242" duration="452000" />
+      <workItem from="1583053887294" duration="8958000" />
     </task>
     <servers />
   </component>
@@ -83,38 +102,47 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1366" height="224" key="GridCell.Tab.0.bottom" timestamp="1583044794075">
-      <screen x="52" y="23" width="1388" height="877" />
+    <state width="1366" height="224" key="GridCell.Tab.0.bottom" timestamp="1583045728644">
+      <screen x="60" y="23" width="1380" height="877" />
     </state>
     <state width="1366" height="224" key="GridCell.Tab.0.bottom/48.23.1392.877/1440.23.1920.1057@48.23.1392.877" timestamp="1583007100934" />
     <state width="1366" height="224" key="GridCell.Tab.0.bottom/50.23.1390.877@50.23.1390.877" timestamp="1583034827501" />
     <state width="1366" height="224" key="GridCell.Tab.0.bottom/52.23.1388.877@52.23.1388.877" timestamp="1583044794075" />
     <state width="1366" height="224" key="GridCell.Tab.0.bottom/54.23.1386.877/1440.23.1920.1057@54.23.1386.877" timestamp="1582997455412" />
-    <state width="1366" height="224" key="GridCell.Tab.0.center" timestamp="1583044794075">
-      <screen x="52" y="23" width="1388" height="877" />
+    <state width="1366" height="224" key="GridCell.Tab.0.bottom/60.23.1380.877@60.23.1380.877" timestamp="1583045728644" />
+    <state width="1366" height="224" key="GridCell.Tab.0.center" timestamp="1583045728643">
+      <screen x="60" y="23" width="1380" height="877" />
     </state>
     <state width="1366" height="224" key="GridCell.Tab.0.center/48.23.1392.877/1440.23.1920.1057@48.23.1392.877" timestamp="1583007100931" />
     <state width="1366" height="224" key="GridCell.Tab.0.center/50.23.1390.877@50.23.1390.877" timestamp="1583034827500" />
     <state width="1366" height="224" key="GridCell.Tab.0.center/52.23.1388.877@52.23.1388.877" timestamp="1583044794075" />
     <state width="1366" height="224" key="GridCell.Tab.0.center/54.23.1386.877/1440.23.1920.1057@54.23.1386.877" timestamp="1582997455411" />
-    <state width="1366" height="224" key="GridCell.Tab.0.left" timestamp="1583044794074">
-      <screen x="52" y="23" width="1388" height="877" />
+    <state width="1366" height="224" key="GridCell.Tab.0.center/60.23.1380.877@60.23.1380.877" timestamp="1583045728643" />
+    <state width="1366" height="224" key="GridCell.Tab.0.left" timestamp="1583045728643">
+      <screen x="60" y="23" width="1380" height="877" />
     </state>
     <state width="1366" height="224" key="GridCell.Tab.0.left/48.23.1392.877/1440.23.1920.1057@48.23.1392.877" timestamp="1583007100928" />
     <state width="1366" height="224" key="GridCell.Tab.0.left/50.23.1390.877@50.23.1390.877" timestamp="1583034827500" />
     <state width="1366" height="224" key="GridCell.Tab.0.left/52.23.1388.877@52.23.1388.877" timestamp="1583044794074" />
     <state width="1366" height="224" key="GridCell.Tab.0.left/54.23.1386.877/1440.23.1920.1057@54.23.1386.877" timestamp="1582997455410" />
-    <state width="1366" height="224" key="GridCell.Tab.0.right" timestamp="1583044794075">
-      <screen x="52" y="23" width="1388" height="877" />
+    <state width="1366" height="224" key="GridCell.Tab.0.left/60.23.1380.877@60.23.1380.877" timestamp="1583045728643" />
+    <state width="1366" height="224" key="GridCell.Tab.0.right" timestamp="1583045728644">
+      <screen x="60" y="23" width="1380" height="877" />
     </state>
     <state width="1366" height="224" key="GridCell.Tab.0.right/48.23.1392.877/1440.23.1920.1057@48.23.1392.877" timestamp="1583007100932" />
     <state width="1366" height="224" key="GridCell.Tab.0.right/50.23.1390.877@50.23.1390.877" timestamp="1583034827500" />
     <state width="1366" height="224" key="GridCell.Tab.0.right/52.23.1388.877@52.23.1388.877" timestamp="1583044794075" />
     <state width="1366" height="224" key="GridCell.Tab.0.right/54.23.1386.877/1440.23.1920.1057@54.23.1386.877" timestamp="1582997455411" />
-    <state x="155" y="142" width="1172" height="637" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1583007626870">
-      <screen x="48" y="23" width="1392" height="877" />
+    <state width="1366" height="224" key="GridCell.Tab.0.right/60.23.1380.877@60.23.1380.877" timestamp="1583045728644" />
+    <state x="166" y="142" width="1162" height="637" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1583086276097">
+      <screen x="60" y="23" width="1380" height="877" />
     </state>
     <state x="155" y="142" width="1172" height="637" key="com.intellij.history.integration.ui.views.FileHistoryDialog/48.23.1392.877/1440.23.1920.1057@48.23.1392.877" timestamp="1583007626870" />
     <state x="161" y="142" width="1166" height="637" key="com.intellij.history.integration.ui.views.FileHistoryDialog/54.23.1386.877/1440.23.1920.1057@54.23.1386.877" timestamp="1583000142430" />
+    <state x="166" y="142" width="1162" height="637" key="com.intellij.history.integration.ui.views.FileHistoryDialog/60.23.1380.877/1440.23.1920.1057@60.23.1380.877" timestamp="1583086276097" />
+    <state x="421" y="293" key="com.intellij.ide.util.TipDialog" timestamp="1583053888337">
+      <screen x="60" y="23" width="1380" height="877" />
+    </state>
+    <state x="421" y="293" key="com.intellij.ide.util.TipDialog/60.23.1380.877@60.23.1380.877" timestamp="1583053888337" />
   </component>
 </project>

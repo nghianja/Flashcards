@@ -1,4 +1,3 @@
-Japan
-Tokyo
-Russia
-Moscow
+Japan:Tokyo
+Russia:Moscow
+Malaysia:Kuala Lumpur

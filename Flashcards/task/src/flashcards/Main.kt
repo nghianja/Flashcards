@@ -4,111 +4,158 @@ import java.io.File
 import java.io.FileNotFoundException
 
 val cards = mutableMapOf<String, String>()
+val stats = mutableMapOf<String, Int>()
+val logs = mutableListOf<String>()
+
+val logLine: (String) -> String = {
+    logs.add(it)
+    it
+}
 
 fun addCard() {
-    println("The card:")
-    val term = readLine()!!
+    println(logLine("The card:"))
+    val term = logLine(readLine()!!)
     if (cards.containsKey(term)) {
-        println("The card \"$term\" already exists.")
+        println(logLine("The card \"$term\" already exists."))
         return
     }
-    println("The definition of the card:")
-    val definition = readLine()!!
+    println(logLine("The definition of the card:"))
+    val definition = logLine(readLine()!!)
     if (cards.containsValue(definition)) {
-        println("The definition \"$definition\" already exists.")
+        println(logLine("The definition \"$definition\" already exists."))
         return
     }
     cards[term] = definition
-    println("The pair (\"$term\":\"$definition\") has been added.")
+    println(logLine("The pair (\"$term\":\"$definition\") has been added."))
 }
 
 fun removeCard() {
-    println("The card:")
-    val term = readLine()!!
+    println(logLine("The card:"))
+    val term = logLine(readLine()!!)
     if (!cards.containsKey(term)) {
-        println("Can't remove \"$term\": there is no such card.")
+        println(logLine("Can't remove \"$term\": there is no such card."))
         return
     }
-    if (cards.remove(term) != null)
-        println("The card has been removed.")
+    if (cards.remove(term) != null) {
+        stats.remove(term)
+        println(logLine("The card has been removed."))
+    }
 }
 
 fun loadCards() {
     try {
-        println("File name:")
-        val filename = readLine()!!
-        var term = ""
-        var definition = ""
+        println(logLine("File name:"))
+        val filename = logLine(readLine()!!)
         var count = 0
         File(filename).forEachLine {
-            if (term == "") {
-                term = it
-            } else {
-                definition = it
-                cards[term] = definition
-                term = ""
+            if (it.isNotBlank()) {
+                val tokens = it.split(":")
+                cards[tokens[0]] = tokens[1]
+                stats[tokens[0]] = tokens[2].toInt()
                 count++
             }
         }
-        println("$count cards have been loaded.")
+        println(logLine("$count cards have been loaded."))
     } catch (fnfe: FileNotFoundException) {
-        println("File not found.")
+        println(logLine("File not found."))
     }
 }
 
 fun saveCards() {
     try {
-        println("File name:")
-        val filename = readLine()!!
+        println(logLine("File name:"))
+        val filename = logLine(readLine()!!)
         var text = ""
         for ((k, v) in cards) {
-            text += "$k\n$v\n"
+            val m = stats.getOrDefault(k, 0)
+            text += "$k:$v:$m\n"
         }
         File(filename).writeText(text)
-        println("${cards.size} cards have been saved.")
+        println(logLine("${cards.size} cards have been saved."))
     } catch (fnfe: FileNotFoundException) {
-        println("File not found.")
+        println(logLine("File not found."))
     }
 }
 
 fun askCard() {
     val keys = cards.keys
-    println("How many times to ask?")
-    val times = readLine()!!.toInt()
+    println(logLine("How many times to ask?"))
+    val times = logLine(readLine()!!).toInt()
     for (i in 1..times) {
         val k = keys.random()
         val v = cards[k]!!
-        println("Print the definition of \"$k\":")
-        val answer = readLine()
+        println(logLine("Print the definition of \"$k\":"))
+        val answer = logLine(readLine()!!)
         if (answer == v) {
-            println("Correct answer.")
+            println(logLine("Correct answer."))
         } else {
-            print("Wrong answer. The correct one is \"$v\"")
             val filtered = cards.filterValues { it == answer }
             val iterator = filtered.iterator()
             if (iterator.hasNext()) {
-                println(", you've just written the definition of \"${iterator.next().key}\".")
+                println(logLine("Wrong answer. The correct one is \"$v\", you've" +
+                    " just written the definition of \"${iterator.next().key}\"."))
             } else {
-                println(".")
+                println(logLine("Wrong answer. The correct one is \"$v\"."))
             }
+            stats[k] = stats.getOrDefault(k, 0) + 1
         }
     }
 }
 
+fun saveLog() {
+    try {
+        println(logLine("File name:"))
+        val filename = logLine(readLine()!!)
+        File(filename).writeText(logs.joinToString(postfix = "\n"))
+        println(logLine("The log has been saved."))
+    } catch (fnfe: FileNotFoundException) {
+        println(logLine("File not found."))
+    }
+}
+
+fun getHardest() {
+    val hardest = stats.maxBy { it.value }
+    if (hardest == null) {
+        println(logLine("There are no cards with errors."))
+        return
+    }
+    val hardestCards = stats.filterValues { it > 0 && it == hardest.value }
+    var output: String
+    if (hardestCards.size > 1) {
+        output = "The hardest cards are "
+        val terms = mutableListOf<String>()
+        hardestCards.forEach {
+            terms.add("\"${it.key}\"")
+        }
+        output += terms.joinToString(", ") + ". You have ${hardest.value} errors answering them."
+    } else {
+        output = "The hardest card is \"${hardest.key}\". You have ${hardest.value} errors answering them."
+    }
+    println(logLine(output))
+}
+
+fun resetStats() {
+    stats.clear()
+    println(logLine("Card statistics has been reset."))
+}
+
 fun main() {
     loop@ while (true) {
-        println("Input the action (add, remove, import, export, ask, exit):")
-        when (readLine()!!) {
+        println(logLine("Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):"))
+        when (logLine(readLine()!!)) {
             "add" -> addCard()
             "remove" -> removeCard()
             "import" -> loadCards()
             "export" -> saveCards()
             "ask" -> askCard()
             "exit" -> {
-                println("Bye bye!")
+                println(logLine("Bye bye!"))
                 break@loop
             }
+            "log" -> saveLog()
+            "hardest card" -> getHardest()
+            "reset stats" -> resetStats()
         }
-        println()
+        println(logLine(""))
     }
 }

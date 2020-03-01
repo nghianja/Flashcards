@@ -344,6 +344,12 @@ files:
         }
     }
   learner_created: false
+- name: capitalsNew.txt
+  visible: true
+  learner_created: true
+- name: capitals.txt
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/83/stages/461/implement
-status: Unchecked
+status: Solved
 record: -1

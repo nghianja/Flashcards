@@ -42,10 +42,8 @@ fun removeCard() {
     }
 }
 
-fun loadCards() {
+fun loadCards(filename: String) {
     try {
-        println(logLine("File name:"))
-        val filename = logLine(readLine()!!)
         var count = 0
         File(filename).forEachLine {
             if (it.isNotBlank()) {
@@ -61,10 +59,8 @@ fun loadCards() {
     }
 }
 
-fun saveCards() {
+fun saveCards(filename: String) {
     try {
-        println(logLine("File name:"))
-        val filename = logLine(readLine()!!)
         var text = ""
         for ((k, v) in cards) {
             val m = stats.getOrDefault(k, 0)
@@ -139,17 +135,39 @@ fun resetStats() {
     println(logLine("Card statistics has been reset."))
 }
 
-fun main() {
+fun main(args: Array<String>) {
+    var iFilename: String? = null
+    var eFilename: String? = null
+    for (i in 1 until args.size step 2) {
+        when (args[i - 1]) {
+            "-import" -> iFilename = args[i]
+            "-export" -> eFilename = args[i]
+        }
+    }
+    if (iFilename != null) {
+        loadCards(iFilename)
+    }
     loop@ while (true) {
         println(logLine("Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):"))
         when (logLine(readLine()!!)) {
             "add" -> addCard()
             "remove" -> removeCard()
-            "import" -> loadCards()
-            "export" -> saveCards()
+            "import" -> {
+                println(logLine("File name:"))
+                val filename = logLine(readLine()!!)
+                loadCards(filename)
+            }
+            "export" -> {
+                println(logLine("File name:"))
+                val filename = logLine(readLine()!!)
+                saveCards(filename)
+            }
             "ask" -> askCard()
             "exit" -> {
                 println(logLine("Bye bye!"))
+                if (eFilename != null) {
+                    saveCards(eFilename)
+                }
                 break@loop
             }
             "log" -> saveLog()

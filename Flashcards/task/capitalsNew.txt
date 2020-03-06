@@ -1,2 +1,3 @@
-France
-Paris
+France:Paris:1
+Russia:Moscow:3
+Japan:Tokyo:0
